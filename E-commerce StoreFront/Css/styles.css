@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f4f4f9;
+    overflow-x: hidden;
+}
+
+a {
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+header h1:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+    transform: scale(1.1);
+}
+
+.cart-btn {
+    position: relative;
+    font-size: 1.2rem;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    min-height: 80vh;
+}
+
+section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+section.active {
+    display: block;
+    opacity: 1;
+}
+
+.home-banner {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+}
+
+.home-banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.home-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.home-banner button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ffd700, #ff8c00);
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.home-banner button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 10px #ffd700;
+}
+
+.products {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.product {
+    max-width: 250px;
+    padding: 30px;
+    margin: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.product:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 35px #764ba2;
+}
+
+.product img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.6s ease-in-out;
+    object-fit: contain;
+}
+
+.product img:hover {
+    transform: scale(1.8);
+    z-index: 10;
+    position: relative;
+}
+
+.product h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.product p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.product .price {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.product button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.product button:hover {
+    background: linear-gradient(135deg, #764ba2, #667eea);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.testimonial {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 10px #667eea;
+}
+
+#contact {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact input,
+#contact textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+#contact button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+}
+
+#contact button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+.cart-btn {
+    position: relative;
+    font-size: 1.2rem;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.cart {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 300px;
+    height: 100%;
+    background: white;
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    transition: right 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    z-index: 200;
+}
+
+.cart.active {
+    right: 0;
+}
+
+.cart h2 {
+    margin-bottom: 20px;
+}
+
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s, opacity 0.4s;
+    opacity: 0;
+}
+
+.cart-item.show {
+    opacity: 1;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quantity-controls button {
+    border: none;
+    background: #667eea;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.quantity-controls button:hover {
+    background: #764ba2;
+    transform: scale(1.1);
+}
+
+.remove-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.remove-btn:hover {
+    transform: scale(1.1);
+}
+
+.total {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.close-cart {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.close-cart:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ff8c00;
+}
+
+
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #ffd700, #ff8c00);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 500;
+}
+
+#back-to-top:hover {
+    transform: scale(1.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 10px #ffd700;
+}
+
+.flying-img {
+     position: absolute;
+    width: 100px;
+    height: 70px;
+    z-index: 500;
+    pointer-events: none;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s;
+}
+
+@media(max-width:500px) {
+    .products {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .cart {
+        width: 250px;
+    }
+}

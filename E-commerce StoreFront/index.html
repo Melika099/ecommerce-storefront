@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyShop E-Commerce Mockup</title>
+  <link rel="stylesheet" href="Css/styles.css">
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1 id="logo">MyShop</h1>
+    <div class="nav-links">
+      <a id="home-link">Home</a>
+      <a id="shop-link">Shop</a>
+      <a id="contact-link">Contact</a>
+      <button class="cart-btn" id="cart-btn">🛒 <span class="cart-count" id="cart-count">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="active">
+      <div class="home-banner">
+        <h2>Welcome to MyShop</h2>
+        <p>Your one-stop mockup store! Explore products, add them to the cart, and enjoy smooth animations.</p>
+        <button id="shop-now">Shop Now</button>
+      </div>
+
+
+      <h3 style="text-align:center; margin-bottom:20px;">Featured Products</h3>
+      <div class="products">
+        <div class="product">
+          <img src="pics/red sneakers.png">
+          <h3>Red Sneakers</h3>
+          <p>Stylish and comfy</p>
+          <div class="price">R450</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="pics/blue hoodie.png">
+          <h3>Blue Hoodie</h3>
+          <p>Cozy and trendy</p>
+          <div class="price">R250</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product"><img src="pics/yellow cap.png">
+          <h3>Yellow Cap</h3>
+          <p>Perfect for summer</p>
+          <div class="price">R200</div><button>Add to Cart</button>
+        </div>
+
+        <div class="product"><img src="pics/green backpack.jpg">
+          <h3>Green Backpack</h3>
+          <p>Durable and spacious</p>
+          <div class="price">R600</div><button>Add to Cart</button>
+        </div>
+
+        <div class="product"><img src="pics/pink water bottle.jpg">
+          <h3>Pink Water Bottle</h3>
+          <p>Eco-friendly and stylish</p>
+          <div class="price">R150</div><button>Add to Cart</button>
+        </div>
+      </div>
+
+
+      <div class="home-testimonials">
+        <h3 style="text-align:center; margin:40px 0 20px;">What Our Customers Say</h3>
+        <div class="testimonials">
+          <div class="testimonial">
+            <p>"Amazing products! The quality is unmatched."</p>
+            <h4>- Jane Doe</h4>
+          </div>
+          <div class="testimonial">
+            <p>"Fast delivery and excellent customer service."</p>
+            <h4>- John Smith</h4>
+          </div>
+          <div class="testimonial">
+            <p>"I love my purchase! Highly recommended."</p>
+            <h4>- Mary Johnson</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop">
+      <h3 style="text-align:center;">Shop Products</h3>
+      <div class="products">
+        <div class="product"><img src="pics/classic sneakers.jpg">
+          <h3>Classic Sneakers</h3>
+          <p>High quality item</p>
+          <div class="price">R725</div><button>Add to Cart</button>
+        </div>
+        <div class="product"><img src="pics/leather jacket.jpg">
+          <h3>Leather Jacket</h3>
+          <p>Stylish and durable</p>
+          <div class="price">R940</div><button>Add to Cart</button>
+        </div>
+        <div class="product"><img src="pics/sport cap.jpg">
+          <h3>Sports Cap</h3>
+          <p>Best seller item</p>
+          <div class="price">R430</div><button>Add to Cart</button>
+        </div>
+        <div class="product"><img src="pics/scarf.jpg">
+          <h3>Winter Scarf</h3>
+          <p>Top rated</p>
+          <div class="price">R850</div><button>Add to Cart</button>
+        </div>
+        <div class="product"><img src="pics/travel bag.jpg">
+          <h3>Travel Bag</h3>
+          <p>Limited edition</p>
+          <div class="price">R3500</div><button>Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section> 
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MyShop. All rights reserved.</p>
+    <p><a id="home-footer">Home</a> | <a id="shop-footer">Shop</a> | <a id="contact-footer">Contact</a></p>
+  </footer>
+
+  <div class="cart" id="cart">
+    <h2>Your Cart</h2>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="total" id="cart-total">Total: R0</div>
+    <button class="close-cart" id="close-cart">Close</button>
+  </div>
+
+  <button id="back-to-top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
